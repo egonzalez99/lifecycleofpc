@@ -32,29 +32,11 @@
     grid-template-rows: repeat(1, 100%);
     grid-template-columns: repeat(2, 1fr);
 
-    --stagger-delay: 100ms;
+
 }
 
 
-.image:nth-child(1) {
-    grid-area: a;
-    animation-delay: calc(1 * var(--stagger-delay));
-}
 
-.image:nth-child(2) {
-    grid-area: b;
-    animation-delay: calc(2 * var(--stagger-delay));
-}
-
-.image:nth-child(3) {
-    grid-area: c;
-    animation-delay: calc(3 * var(--stagger-delay));
-}
-
-.image:last-child {
-    grid-area: d;
-    animation-delay: calc(4 * var(--stagger-delay));
-}
 
 
 
