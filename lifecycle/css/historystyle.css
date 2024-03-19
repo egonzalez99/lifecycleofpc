@@ -35,11 +35,6 @@
 
 }
 
-
-
-
-
-
 /*set the amount of grids content and dynamically remap to browser/screen size */
 .grid {
     display: grid;
