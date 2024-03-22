@@ -35,7 +35,7 @@
 
 }
 
-/*set the amount of grids content and dynamically remap to browser/screen size */
+/*set the amount of grids content and dynamically remap to browser/screen size 
 .grid {
     display: grid;
     gap: 1rem;
@@ -51,7 +51,7 @@
     flex-direction: column;
     align-items: center;
 }
-/*once the screen reaches a min value it will adjust correctly instead of cutting off content */
+/*once the screen reaches a min value it will adjust correctly instead of cutting off content
 @media screen and (min-width: 600px) {
     .grid-tall {
         grid-row: span 2 / auto;
@@ -62,7 +62,7 @@
     }
 }
 
-
+*/
 .image {
     background-color:#59ce8f;
     animation: gridStart 700ms ease-out;

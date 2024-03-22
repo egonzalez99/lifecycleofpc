@@ -106,3 +106,38 @@ header nav ul li {
  .navbar a:hover::before {
     width: 100%;
  }
+
+ /* Container Styles */
+ .container {
+   width: 100%;
+   height: 100vh;
+   overflow-y: scroll; /*overflow vertical axis when scrolling and lets users scroll through contents */
+   scroll-snap-type: y mandatory;/* scrolling will snap to the nearest vertical direction after scrolling */
+ }
+
+ /* Slides Styles */
+ .slides {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 50px;
+   scroll-snap-align: start;
+ }
+
+.slide1 {
+   background: linear-gradient(to bottom right, #ff0000, #0000ff);
+}
+
+.slide2 {
+   background: linear-gradient(to bottom right, #FF0000, #00FFFF);
+}
+
+.slide3 {
+   background: linear-gradient(to bottom right, #414a4c, #FFB90F);
+}
+
+.heading {
+   color: aliceblue;
+}
