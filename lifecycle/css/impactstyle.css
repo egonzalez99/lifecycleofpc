@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Header & Logo styles */
+ 
+.header {
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98.5%; /* You can adjust this value to your preference */
+    margin: 0 auto; /* Center the header horizontally */
+    padding: 10px 20px; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+ }
+
+ .logo {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+ }
+
+/* Navigation list styles */
+
+header nav ul li {
+    font-size: 1.2em; 
+    line-height: 2.3em; 
+    height: 2.3em;
+    padding: 0px 5px;
+ }
+ 
+ header nav ul li a {
+    color: white;
+    display: block;
+    width: 100%;
+ }
+ 
+ .navbar a {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 10px;
+ }
+ 
+ .navbar a {
+    position: relative;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+ }
+
+ .navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 1;
+    height: 2px;
+    background: white;
+ }
+
+ .navbar a:hover::before {
+    width: 100%;
+ }
+
+/*CSS values */ 
+:root {
+    --first-color: hsl(82, 60%, 28%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 95%);
+    --container-color: hsl(0, 0%, 100%);
+
+    --h2-font-size: 1.5em;
+    --body-font: "Roboto", sans-serif;
+    --small-font-size: .810rem;    
+}
+
+/*Topography Styles*/
+@media screen and (min-width: 720px) {
+    :root {
+        --h2-font-size: 1.5em;
+        --small-font-size: .870rem; 
+    }
+}
+/*HTML Styles */
+html {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Card Styles*/
+.container {
+    display: grid;
+
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+    color: black;
+    
+}
+
+.card_container {
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card_article {
+    position: relative;
+    overflow: hidden;
+}
+
+.card_img {
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.card_data {
+    width: 200px;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    left: 0;
+    right: 0;
+    bottom: -9rem;
+    opacity: 0; 
+    margin-inline: auto;
+    position: absolute;
+    transition: opacity 1s 1s;
+    background-color: var(--container-color);
+    box-shadow: 0 0px 20px hsla(0, 0%, 0%, .15);
+}
+
+.card_description {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: .25rem;
+}
+
+.card_heading {
+    font-weight: 500;
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+
+.card_button {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+}
+
+.card_button:hover {
+    text-decoration: underline;
+}
+
+/*Animation when card is hovered over */
+.card_article:hover .card_data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card_article:hover {
+    animation: remove-overflow 2s forwards;
+}
+
+.card_article:hover {
+    animation: remove-overflow 2s forwards;
+}
+
+.card_article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+
+.card_article:not(:hover) .card_data {
+    animation: remove-data 2s forwards;
+}
+
+/*Card Animation */
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+        overflow: inherit;
+    }
+}
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+    50% {
+        overflow: hidden;
+    }
+}
+
+/*Optimize for smaller screens */
+@media screen and (max-width: 360px) {
+    .container {
+        margin-inline: 1rem;
+    }
+    .card_data {
+        width: 250px;
+        padding:1rem;
+    }
+}
+
+/*Optimize for average screens */
+@media screen and (max-width: 6410px) {
+    .card_container {
+        grid-template-columns: repeat(3, 1fr);
+
+        column-gap: 3.5rem;
+    }
+    
+}
+
+/*Optimize for bigger screens */
+@media screen and (max-width: 1108px) {
+    .container {
+        height: 100vh;
+    }
+    .card_container {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .card_img {
+        width: 350px;
+    }
+    .card_data {
+        width: 310px;
+        padding-inline: 2.5rem;
+        padding: 1rem;
+    }
+}
+
+/*Fliping Card */
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    perspective: 1000px; /* Adds perspective for 3D effect */
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    justify-content: center;
+
+}
+
+.flip-card:hover .card {
+    transform: rotateY(180deg); /* Flips the card on hover */
+    cursor: pointer;
+    transition: transform 1.5s;
+}
+
+.front-card,
+.back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front-card {
+    background-color: #bbb; /* Front side background color */
+    color: black; /* Front side text color */
+}
+
+.back-card {
+    background-color: #2980b9; /* Back side background color */
+    color: white; /* Back side text color */
+    transform: rotateY(180deg); /* Initially flipped to hide back side */
+}

@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scroll-Triggered Animations</title>
-<style>
-  /* Define styles for slides */
-  .slide {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    opacity: 1; /* Initially hidden */
-    transition: opacity 0.5s ease;
-  }
-  
-  /* Define animation class */
-  .animate {
-    opacity: 1; /* Show slide when animated */
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/impactstyle.css" rel="stylesheet" />
+  <title>Impact Page</title>
 </head>
 <body>
 
-<div class="slide" id="slide1">
-  <h1>Slide 1</h1>
-</div>
+  <header class="header">
+    <a href="#" class="logo">Micosoft</a>
+    <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="pages/history.html">History of PC</a>
+        <a href="pages/making.html">Making</a>
+        <a href="#">Future</a>
+    </nav>
+  </header>
 
-<div class="slide" id="slide2">
-  <h1>Slide 2</h1>
-</div>
+  <div class="container">
+    <div class="card_container">
+      <article class="card_article">
+        <img src="../imgs/winsows80s.png" alt="microsoft 80s" class="card_img"/>
 
-<div class="slide" id="slide3">
-  <h1>Slide 3</h1>
-</div>
+        <div class="card_data">
+          <span class="card_description">Bill Gates 80s</span>
+          <h2 class="card_heading">Microsoft 80s</h2>
+          <a href="#" class="card_button">Read More</a>
+        </div>
+      </article>
 
-<script>
-// Function to check if an element is in the viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
+      <article class="card_article">
+        <img src="../imgs/windows90s.jpg" alt="microsoft 90s" class="card_img"/>
 
-// Function to handle scroll events
-function handleScroll() {
-  const slides = document.querySelectorAll('.slide');
-  slides.forEach(slide => {
-    if (isInViewport(slide)) {
-      slide.classList.add('animate');
-    } else {
-      slide.classList.remove('animate');
-    }
-  });
-}
+        <div class="card_data">
+          <span class="card_description">Microsoft Products 90s</span>
+          <h2 class="card_heading">Microsoft 90s</h2>
+          <a href="#" class="card_button">Read More</a>
+        </div>
+      </article>
 
-// Add event listener for scroll events
-document.addEventListener('scroll', handleScroll);
-document.addEventListener('DOMContentLoaded', handleScroll); // Handle initial state
+      <article class="card_article">
+        <img src="../imgs/windows00s.webp" alt="microsoft 80s" class="card_img"/>
 
-</script>
+        <div class="card_data">
+          <span class="card_description">Bill Gates Times Square</span>
+          <h2 class="card_heading">Microsoft XP</h2>
+          <a href="#" class="card_button">Read More</a>
+        </div>
+      </article>
+
+      <div class="flip-card">
+        <div class="card">
+            <div class="front-card">
+                <!-- Front content goes here -->
+                <h2>Front Side</h2>
+            </div>
+            <div class="back-card">
+                <!-- Back content goes here -->
+                <h2>Back Side</h2>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
 </body>
-</html>
+</html>>
