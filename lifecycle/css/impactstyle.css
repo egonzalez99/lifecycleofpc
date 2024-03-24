@@ -116,12 +116,12 @@ img {
 /* Card Styles*/
 .container {
     display: grid;
-
+    height: 100vh;
     place-items: center;
     margin-inline: 1.5rem;
     padding-block: 5rem;
+    margin-top: 25px;
     color: black;
-    
 }
 
 .card_container {
@@ -137,6 +137,7 @@ img {
 .card_img {
     width: 328px;
     border-radius: 1.5rem;
+    margin: 50px;
 }
 
 .card_data {
@@ -263,11 +264,10 @@ img {
 /*Optimize for bigger screens */
 @media screen and (max-width: 1108px) {
     .container {
-        height: 100vh;
+        height: 160vh;
     }
     .card_container {
         grid-template-columns: repeat(3, 1fr);
-
     }
     .card_img {
         width: 350px;
@@ -277,48 +277,4 @@ img {
         padding-inline: 2.5rem;
         padding: 1rem;
     }
-}
-
-/*Fliping Card */
-.flip-card {
-    background-color: transparent;
-    width: 200px;
-    height: 200px;
-    perspective: 1000px; /* Adds perspective for 3D effect */
-}
-
-.card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    justify-content: center;
-
-}
-
-.flip-card:hover .card {
-    transform: rotateY(180deg); /* Flips the card on hover */
-    cursor: pointer;
-    transition: transform 1.5s;
-}
-
-.front-card,
-.back-card {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.front-card {
-    background-color: #bbb; /* Front side background color */
-    color: black; /* Front side text color */
-}
-
-.back-card {
-    background-color: #2980b9; /* Back side background color */
-    color: white; /* Back side text color */
-    transform: rotateY(180deg); /* Initially flipped to hide back side */
 }
