@@ -173,11 +173,14 @@ img {
     font-weight: 500;
     color: var(--first-color);
     font-size: var(--small-font-size);
+    background: transparent;
+    border: none;
 }
 
 .card_button:hover {
     text-decoration: underline;
 }
+
 
 /*Animation when card is hovered over */
 .card_article:hover .card_data {
@@ -278,3 +281,4 @@ img {
         padding: 1rem;
     }
 }
+

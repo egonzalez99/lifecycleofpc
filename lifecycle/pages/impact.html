@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../css/impactstyle.css" rel="stylesheet" />
+  <script src="../js/readmore.js"></script>
   <title>Impact Page</title>
 </head>
 <body>
@@ -26,7 +27,10 @@
         <div class="card_data">
           <span class="card_description">Bill Gates 80s</span>
           <h2 class="card_heading">Microsoft 80s</h2>
-          <a href="#" class="card_button">Read More</a>
+          <div class="card_button">
+            <button onclick="readMore()" id="button" class="card_button">Read More</button>
+            <span id="showText" style="display: none;">Additional text goes here..
+          </div>
         </div>
       </article>
 
@@ -36,7 +40,10 @@
         <div class="card_data">
           <span class="card_description">Microsoft Products 90s</span>
           <h2 class="card_heading">Microsoft 90s</h2>
-          <a href="#" class="card_button">Read More</a>
+          <div class="card_button">
+            <button onclick="readMore()" id="button" class="card_button">Read More</button>
+            <span id="showText" style="display: none;">Additional text goes here..
+          </div>
         </div>
       </article>
 
@@ -46,7 +53,12 @@
         <div class="card_data">
           <span class="card_description">Bill Gates Times Square</span>
           <h2 class="card_heading">Microsoft XP</h2>
-          <a href="#" class="card_button">Read More</a>
+          <a href="#" class="card_button">
+            <div class="card_button">
+              <button onclick="readMore()" id="button" class="card_button">Read More</button>
+              <span id="showText" style="display: none;">Additional text goes here..
+            </div>
+          </a>
         </div>
       </article>
 
