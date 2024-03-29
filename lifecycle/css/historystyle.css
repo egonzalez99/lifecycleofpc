@@ -31,38 +31,8 @@
 
     grid-template-rows: repeat(1, 100%);
     grid-template-columns: repeat(2, 1fr);
-
-
 }
 
-/*set the amount of grids content and dynamically remap to browser/screen size 
-.grid {
-    display: grid;
-    gap: 1rem;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-
-    background-color:#59ce8f;
-    animation: gridStart 700ms ease-out;
-    animation-fill-mode: backwards;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-/*once the screen reaches a min value it will adjust correctly instead of cutting off content
-@media screen and (min-width: 600px) {
-    .grid-tall {
-        grid-row: span 2 / auto;
-    }   
-
-    .grid-wide {
-        grid-row: span 2 / auto;
-    }
-}
-
-*/
 .image {
     background-color:#59ce8f;
     animation: gridStart 700ms ease-out;
@@ -98,30 +68,29 @@
     flex-direction: column; /* Change flex direction to stack elements vertically */
     position: relative;
     z-index: 1;/* */
+    color: white;
 }
 
 .bodytext h1 {
     margin-bottom: 20px; /* Add margin below the h1 for spacing */
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     display: flex;
 }
 
-/* create a format of how wide the paragraph's margins should be left to right */
 .bodytext p {
-    color: black;
+    color: white;
     top: 50%;
     left: 50%;
     font-size: 30px;
-    display: inline-block, flex; /* Ensures each line of text is treated as a block */
-    width: 100%; /* Example: Set the width of the paragraph */
-    padding-left: 10%; /* Example: Adjust padding for the left side */
-    padding-right: 10%; /* Example: Adjust padding for the right side */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    display: inline-block, flex; 
+    width: 100%; 
+    padding-left: 10%; /* cutoff of the text */
+    padding-right: 10%; /* cutoff of the text */
+    box-sizing: border-box; 
     text-align: justify, center; /* spacing of the text */
 }
 
 /* Header & Logo styles */
- 
 .header {
     background: linear-gradient(to right, #9c27b0, #8ecdff);
     border-bottom: 1px solid rgb(0, 0, 0);
@@ -129,13 +98,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 98.5%; /* You can adjust this value to your preference */
+    width: 100%; /* You can adjust this value to your preference */
     margin: 0 auto; /* Center the header horizontally */
     padding: 10px 20px; /* Adjust padding as needed */
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: right;
+    z-index: 1;
  }
 
  .logo {
@@ -146,7 +116,6 @@
  }
 
 /* Navigation list styles */
-
 header nav ul li {
     font-size: 1.2em; 
     line-height: 2.3em; 
@@ -161,20 +130,12 @@ header nav ul li {
  }
  
  .navbar a {
-    font-size: 16px;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 10px;
- }
- 
- .navbar a {
     position: relative;
     font-size: 16px;
     color: white;
     font-weight: 500;
     text-decoration: none;
-    margin-left: 40px;
+    margin-right: 30px;
  }
 
  .navbar a::before {
@@ -185,18 +146,65 @@ header nav ul li {
     width: 1;
     height: 2px;
     background: white;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
  }
 
  .navbar a:hover::before {
     width: 100%;
  }
 
- /*html Style */
- html {
+/*html Style */
+html {
     background: rgb(255, 255, 255);
     font-family: "Roboto", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     height: 100%;
- } 
+}
+
+/* Background ANimation */
+.bgAnimation {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.colorBox {
+    background: green;
+    z-index: 1;
+    margin: 2px;
+    filter: brightness(1.1);
+    transition: 2s ease;
+}
+
+.colorBox:hover {
+    background: darkgreen;
+    transition-duration: 0.5s;
+}
+
+.backgroundAnim {
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    filter: blur(60px);
+    animation: animBG 6s linear infinite;
+}
+
+@keyframes animBG {
+   0% {
+    top: -60px;
+   }
+   100% {
+    top: 120%;
+   } 
+}

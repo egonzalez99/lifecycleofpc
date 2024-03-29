@@ -50,75 +50,66 @@ html {
     animation-direction: normal;
     
 }
-
 /* Header & Logo styles */
- 
- .header {
-    background: linear-gradient(to right, #9c27b0, #8ecdff);
-    border-bottom: 1px solid rgb(0, 0, 0);
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 98.5%; /* You can adjust this value to your preference */
-    margin: 0 auto; /* Center the header horizontally */
-    padding: 10px 20px; /* Adjust padding as needed */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: right;
-    font-family: "Helvetica font";
- }
+.header {
+   background: linear-gradient(to right, #9c27b0, #8ecdff);
+   border-bottom: 1px solid rgb(0, 0, 0);
+   color: white;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%; /* You can adjust this value to your preference */
+   margin: 0 auto; /* Center the header horizontally */
+   padding: 10px 20px; /* Adjust padding as needed */
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-align: right;
+   z-index: 1;
+}
 
- .logo {
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
- }
+.logo {
+   font-size: 20px;
+   text-decoration: none;
+   font-weight: 700;
+   color: white;
+}
 
 /* Navigation list styles */
-
 header nav ul li {
-    font-size: 1.2em; 
-    line-height: 2.3em; 
-    height: 2.3em;
-    padding: 0px 5px;
- }
- 
- header nav ul li a {
-    color: white;
-    display: block;
-    width: 100%;
- }
- 
- .navbar a {
-    font-size: 16px;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 10px;
- }
- 
- .navbar a {
-    position: relative;
-    font-size: 16px;
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
- }
+   font-size: 1.2em; 
+   line-height: 2.3em; 
+   height: 2.3em;
+   padding: 0px 5px;
+}
 
- .navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 1;
-    height: 2px;
-    background: white;
- }
+header nav ul li a {
+   color: white;
+   display: block;
+   width: 100%;
+}
 
- .navbar a:hover::before {
-    width: 100%;
- }
+.navbar a {
+   position: relative;
+   font-size: 16px;
+   color: white;
+   font-weight: 500;
+   text-decoration: none;
+   margin-right: 30px;
+}
+
+.navbar a::before {
+   content: '';
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 1;
+   height: 2px;
+   background: white;
+   transform: scaleX(1);
+   transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before {
+   width: 100%;
+}
