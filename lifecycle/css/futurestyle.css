@@ -66,6 +66,26 @@ header nav ul li {
     width: 100%;
  }
 
+ h2 {
+    margin-bottom: 20px; /* Add margin below the h1 for spacing */
+    border-bottom: 3px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+p {
+    color: white;
+    top: 50%;
+    left: 50%;
+    font-size: 30px;
+    display: inline-block, flex; 
+    width: 100%; 
+    padding-left: 10%; /* cutoff of the text */
+    padding-right: 10%; /* cutoff of the text */
+    box-sizing: border-box; 
+    text-align: justify, center; /* spacing of the text */
+}
+
 /*Fliping Card */
 .flip-card-container {
     display: flex;
