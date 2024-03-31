@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../css/impactstyle.css" rel="stylesheet" />
   <script src="../js/readmore.js"></script>
+  <script src="./js/bganimation.js"></script>
   <title>Impact Page</title>
 </head>
 <body>
@@ -31,12 +32,19 @@
           <span class="card_description">Bill Gates 80s</span>
           <h2 class="card_heading">Microsoft 80s</h2>
           <div class="card_button">
-            <button onclick="readMore()" id="button" class="card_button">Read More</button>
-            <span id="showText" style="display: none;">Additional text goes here..
+            <button onclick="readMore('showText1')" id="button1" class="card_button">Read More</button>
+            <span id="showText1" style="display: none;">
+              Microsoft was founded on April 4<sup>th</sup> 1975 in Alberquerque, New Mexico. The comapny was growing into the
+              behemoth it would become in the 1990s-present day by making strategic business moves during the 1900s. The comapny 
+              suppy the operating system for IBM in a licensed agreement instead of [IBM] buying Microsoft. The debuys of Microsoft
+              Word, Windows 1.0, and IPO increased their control of the software/tech market and business growth. Also, Bill Gates and 
+              Steve Jobs had a meeting during the Macintosh Project where Jobs showcased the different tech/applications that both companies 
+              would collaberate on. However, the GUI presented problems where both were arguing about who stole what when developing their own 
+              GUI.
           </div>
         </div>
       </article>
-
+      
       <article class="card_article">
         <img src="../imgs/windows90s.jpg" alt="microsoft 90s" class="card_img"/>
 
@@ -44,8 +52,12 @@
           <span class="card_description">Microsoft Products 90s</span>
           <h2 class="card_heading">Microsoft 90s</h2>
           <div class="card_button">
-            <button onclick="readMore()" id="button" class="card_button">Read More</button>
-            <span id="showText" style="display: none;">Additional text goes here..
+            <button onclick="readMore('showText2')" id="button2" class="card_button">Read More</button>
+            <span id="showText2" style="display: none;">
+              During the 1990's Microsoft started to become the mega corporation it is today by exploding the PC market. 
+              This was achieved by releasing a solid operating system called, Windows 95. Which introduced various features and support that
+              was enhanced with other debuts. Microsoft's browser, Internet Explorer, was introduced, and Microsoft Office
+              saw massive improvements and integration that dominated offices and households across the globe.
           </div>
         </div>
       </article>
@@ -55,17 +67,20 @@
 
         <div class="card_data">
           <span class="card_description">Bill Gates Times Square</span>
-          <h2 class="card_heading">Microsoft XP</h2>
-          <a href="#" class="card_button">
+          <h2 class="card_heading">Microsoft 2000s</h2>
             <div class="card_button">
-              <button onclick="readMore()" id="button" class="card_button">Read More</button>
-              <span id="showText" style="display: none;">Additional text goes here..
+              <button onclick="readMore('showText3')" id="button3" class="card_button">Read More</button>
+              <span id="showText3" style="display: none;">
+                During the 1990's Microsoft started to become the mega corporation it is today by exploding the PC market. 
+                During the 1990's Microsoft started to become the mega corporation it is today by exploding the PC market. 
+                This was achieved by releasing a solid operating system called, Windows 95. Which introduced various features and support that
+                was enhanced with other debuts. Microsoft's browser, Internet Explorer, was introduced, and Microsoft Office
+                saw massive improvements and integration that dominated offices and households across the globe.
             </div>
-          </a>
         </div>
       </article>
 
     </div>
   </div>
 </body>
-</html>>
+</html>
