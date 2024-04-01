@@ -206,3 +206,37 @@ header nav ul li a {
    animation-direction: normal;
    opacity: 0;
 }
+
+p {
+  color: white;
+  font-size: 30px;
+  display: inline-block, flex; 
+  padding-left: 10%; /* cutoff of the text */
+  padding-right: 10%; /* cutoff of the text */
+  box-sizing: border-box; 
+  text-align: justify, center; /* spacing of the text */
+}
+
+.vl {
+  border-left: 6px solid white;
+  height: 500px;
+  margin-left: 5%;
+}
+
+.heading {
+  color: white;
+  font-size: 30px;
+  display: inline-block, flex; 
+  padding-left: 10%; /* cutoff of the text */
+  padding-right: 10%; /* cutoff of the text */
+  box-sizing: border-box; 
+  text-align: justify, center; /* spacing of the text */
+}
+
+img {
+  display: block; /* Ensures proper alignment */
+  margin-top: 20px; /* Adjust as needed to create space between text and image */
+  margin-right: 200px; /* Center the image horizontally */
+
+  width: 100%; /* Adjust the width as needed */
+}
