@@ -225,18 +225,19 @@ p {
 
 .heading {
   color: white;
-  font-size: 30px;
+  font-size: 60px;
   display: inline-block, flex; 
   padding-left: 10%; /* cutoff of the text */
   padding-right: 10%; /* cutoff of the text */
   box-sizing: border-box; 
+  position: relative;
   text-align: justify, center; /* spacing of the text */
 }
 
-img {
-  display: block; /* Ensures proper alignment */
-  margin-top: 20px; /* Adjust as needed to create space between text and image */
-  margin-right: 200px; /* Center the image horizontally */
-
-  width: 100%; /* Adjust the width as needed */
+.slide-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
 }

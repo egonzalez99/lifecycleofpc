@@ -66,6 +66,7 @@ header nav ul li {
     width: 100%;
  }
 
+ /* Text Styles */
  h2 {
     margin-bottom: 20px; /* Add margin below the h1 for spacing */
     border-bottom: 3px;
@@ -124,7 +125,7 @@ p {
 }
 
 .front-card {
-    background-color: #bbb; /* Front side background color */
+    background-color: white; /* Front side background color */
     color: black; /* Front side text color */
 }
 
@@ -173,6 +174,14 @@ p {
     filter: blur(60px);
     animation: animBG 6s linear infinite;
 }
+
+.card-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+  }
 
 @keyframes animBG {
    0% {

@@ -2,7 +2,7 @@
 function readMore() {
     let showText = document.getElementById("showText");
     let buttonText = document.getElementById("button");
-
+    //switch to read less display once texts are shown
     if (showText.style.display === "none") {
         showText.style.display = "inline";
         buttonText.innerText = "Read Less";
