@@ -2,7 +2,7 @@
 This website explains the production and development of personal computers..speficially about Microsoft corporation contributions to the market.
 This project was to utilize various animation styles and techniques for each page throughout the website. 
 
-- *Software* : This front-end project uses HTML. CSS. and Javascript with an external link to Spline 3D.
+- **Software** : This front-end project uses HTML. CSS. and Javascript with an external link to Spline 3D.
 
 -------------------------------------------------------------------------------------------------------------------------
 
