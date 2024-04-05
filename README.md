@@ -6,8 +6,8 @@ This project was to utilize various animation styles and techniques for each pag
 
 -------------------------------------------------------------------------------------------------------------------------
 
-- *HTML* : The HTML file organized my scripts and stylesheets to display the content in interesting ways.
+- **HTML** : The HTML file organized my scripts and stylesheets to display the content in interesting ways.
 
-- *CSS* : The CSS styles used were grid layouts, animation, and manipulating objects of the website. 
+- **CSS** : The CSS styles used were grid layouts, animation, and manipulating objects of the website. 
 
-- *Javascript* : Javascript is used to manupulate and add interactive/animation features throughout the website pages.
+- **Javascript** : Javascript is used to manupulate and add interactive/animation features throughout the website pages.
