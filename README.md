@@ -11,3 +11,8 @@ This project was to utilize various animation styles and techniques for each pag
 - **CSS** : The CSS styles used were grid layouts, animation, and manipulating objects of the website. 
 
 - **Javascript** : Javascript is used to manupulate and add interactive/animation features throughout the website pages.
+
+# 👥 Contributors / Contact
+* **Edward Gonzalez** – Developer, Designer & AI | [GitHub Page: @egonzalez99](https://github.com/egonzalez99)
+
+* 📧 Email: [bryangonzalez040@gmail.com](mailto:bryangonzalez040@gmail.com)
